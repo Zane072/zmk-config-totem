@@ -132,7 +132,7 @@
             bindings = <
          &kp Q      &kp W  &kp F     &kp B      &kp P      &kp J        &kp L        &kp U                &kp Z        &kp MINUS
          &kp LSHFT  &kp R  &kp S     &kp T      &kp G      &kp M        &hm RSHFT N  &hm LEFT_ALT E       &hm RCTRL I  &kp O
-&kp ESC  &kp LCTRL  &kp X  &kp C     &kp D      &kp V      &kp K        &kp H        &hm RIGHT_ALT COMMA  &kp DOT      &kp SLASH  &tog 0
+&kp ESC  &kp LCTRL  &kp X  &kp C     &kp D      &kp V      &kp K        &kp H        &hm RIGHT_ALT COMMA  &kp DOT      &kp SLASH  &none
                            &kp LALT  &kp SPACE  &kp TAB    &lt 5 ENTER  &lt 0 BSPC   &lt 0 DELETE
             >;
         };
