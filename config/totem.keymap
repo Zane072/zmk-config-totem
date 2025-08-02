@@ -46,6 +46,16 @@
             global-quick-tap;
             bindings = <&kp>, <&kp>;
         };
+
+        um: um {
+            compatible = "zmk,behavior-hold-tap";
+            label = "UM";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            quick-tap-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -57,7 +67,7 @@
             display-name = "Base";
             bindings = <
          &kp Q      &kp W        &kp F            &kp B           &kp P        &kp J        &kp L           &mt LEFT_BRACKET U   &kp Z        &kp MINUS
-         &mt SQT A  &hm LCTRL R  &hm LEFT_ALT S   &hm LSHIFT T    &kp G        &kp M        &hm RSHFT N     &hm LEFT_ALT E       &hm RCTRL I  &mt SEMICOLON O
+         &um SQT A  &hm LCTRL R  &hm LEFT_ALT S   &hm LSHIFT T    &kp G        &kp M        &hm RSHFT N     &hm LEFT_ALT E       &hm RCTRL I  &um SEMICOLON O
 &kp ESC  &kp Y      &kp X        &hm RIGHT_ALT C  &hm LEFT_GUI D  &kp V        &kp K        &hm LEFT_GUI H  &hm RIGHT_ALT COMMA  &kp DOT      &kp SLASH        &tog 7
                                  &lt 3 DEL        &lt 1 SPACE     &lt 2 TAB    &lt 5 ENTER  &lt 6 BSPC      &lt 4 DELETE
             >;
