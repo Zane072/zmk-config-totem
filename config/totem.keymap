@@ -41,20 +41,21 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <220>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
+            flavor = "balanced";
+            tapping-term-ms = <250>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
+
+            require-prior-idle-ms = <100>;
         };
 
-        um: um {
+        um: umlaut_mods {
             compatible = "zmk,behavior-hold-tap";
-            label = "UM";
+            label = "UMLAUT_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <300>;
-            quick-tap-ms = <125>;
+            quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
     };
@@ -67,7 +68,7 @@
         Base {
             display-name = "Base";
             bindings = <
-         &kp DE_Q              &kp DE_W        &kp DE_F            &kp DE_B           &kp DE_P     &kp DE_J     &kp DE_L           &mt DE_U_UMLAUT DE_U    &kp DE_Y        &kp DE_SZ
+         &kp DE_Q              &kp DE_W        &kp DE_F            &kp DE_B           &kp DE_P     &kp DE_J     &kp DE_L           &um DE_U_UMLAUT DE_U    &kp DE_Y        &kp DE_SZ
          &um DE_A_UMLAUT DE_A  &hm LCTRL DE_R  &hm LEFT_ALT DE_S   &hm LSHIFT DE_T    &kp DE_G     &kp DE_M     &hm RSHFT DE_N     &hm LEFT_ALT DE_E       &hm RCTRL DE_I  &um DE_O_UMLAUT DE_O
 &kp ESC  &kp DE_Z              &kp DE_X        &hm RIGHT_ALT DE_C  &hm LEFT_GUI DE_D  &kp DE_V     &kp DE_K     &hm LEFT_GUI DE_H  &hm RIGHT_ALT DE_COMMA  &kp DE_PERIOD   &kp DE_MINUS          &tog 7
                                                &lt 1 DEL           &lt 2 SPACE        &lt 3 TAB    &lt 6 ENTER  &lt 5 BSPC         &lt 4 DELETE
