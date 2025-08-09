@@ -56,7 +56,7 @@
             label = "UMLAUT_MODS";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <300>;
+            tapping-term-ms = <250>;
             quick-tap-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
@@ -76,7 +76,33 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        Left_Bracket {
+            bindings = <&kp DE_LEFT_BRACKET>;
+            key-positions = <11 17>;
+            layers = <4>;
+        };
+
+        Right_Bracket {
+            bindings = <&kp DE_RIGHT_BRACKET>;
+            key-positions = <17 13>;
+            layers = <4>;
+        };
+
+        Left_Brace {
+            bindings = <&kp DE_LEFT_BRACE>;
+            key-positions = <11 18>;
+            layers = <4>;
+        };
+
+        Right_Brace {
+            bindings = <&kp DE_RIGHT_BRACE>;
+            key-positions = <13 18>;
+            layers = <4>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
